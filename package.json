@@ -4,7 +4,7 @@
     "type" : "git",
     "url" : "https://github.com/madsleejensen/react-native-image-sequence.git"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "android support for Image `capInsets`",
   "author": {
     "name": "Mads Lee Jensen",
@@ -12,7 +12,7 @@
     "url": "http://mads-lee.dk"
   },
   "license": "MIT",
-  "homepage": "https://github.com/madsleejensen/react-native-image-sequence",
+  "homepage": "https://github.com/madsleejensen/react-native-image-capinsets",
   "keywords": [
     "capInsets",
     "9-patch",

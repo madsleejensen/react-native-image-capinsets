@@ -1,4 +1,4 @@
-package dk.madslee;
+package dk.madslee.imageCapInsets;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

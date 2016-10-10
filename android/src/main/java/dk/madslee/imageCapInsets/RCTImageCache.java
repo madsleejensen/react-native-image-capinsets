@@ -1,4 +1,4 @@
-package dk.madslee;
+package dk.madslee.imageCapInsets;
 
 import android.graphics.drawable.NinePatchDrawable;
 import java.util.HashMap;

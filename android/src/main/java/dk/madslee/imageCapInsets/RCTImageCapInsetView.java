@@ -1,12 +1,12 @@
-package dk.madslee;
+package dk.madslee.imageCapInsets;
 
 import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.NinePatchDrawable;
 import android.widget.ImageView;
-import dk.madslee.utils.NinePatchBitmapFactory;
-import dk.madslee.utils.RCTImageLoaderListener;
-import dk.madslee.utils.RCTImageLoaderTask;
+import dk.madslee.imageCapInsets.utils.NinePatchBitmapFactory;
+import dk.madslee.imageCapInsets.utils.RCTImageLoaderListener;
+import dk.madslee.imageCapInsets.utils.RCTImageLoaderTask;
 
 
 public class RCTImageCapInsetView extends ImageView {

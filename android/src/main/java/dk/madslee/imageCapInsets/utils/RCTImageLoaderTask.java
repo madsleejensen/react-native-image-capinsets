@@ -1,4 +1,4 @@
-package dk.madslee.utils;
+package dk.madslee.imageCapInsets.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
