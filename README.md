@@ -1,5 +1,6 @@
 # react-native-image-capinsets
-
+adds support for a similar functionality as `<Image capInsets={...} />` to android.
+behind the scenes it will generate a `NinePatchDrawable` and set as background for the android `ImageView`
 
 ## Installation
 
@@ -12,28 +13,8 @@
 ```javascript
 import ImageCapInset from 'react-native-image-capinsets';
 
-const images = [
-  require('1.jpg'),
-  require('2.jpg'),
-  require('3.jpg'),
-  require('4.jpg'),
-  require('5.jpg'),
-];
-
-const centerIndex = Math.round(images.length / 2);
-
-<ImageSequence
-  images={images}
-  startFrameIndex={centerIndex}
-  style={{width: 50, height: 50}} />
-```
-
-### Change animation speed
-You can change the speed of the animation by setting the `framesPerSecond` property.
-
-```javascript
-<ImageSequence
-  images={images}
-  framesPerSecond={24}
+<ImageCapInset
+  source={require('./bubble.png')}
+  capInsets={{ top: 8, right: 8, bottom: 8, left: 8 }}
   />
 ```
