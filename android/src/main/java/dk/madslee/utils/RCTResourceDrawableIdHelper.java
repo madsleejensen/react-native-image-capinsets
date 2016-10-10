@@ -1,4 +1,4 @@
-package dk.madslee;
+package dk.madslee.utils;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
