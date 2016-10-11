@@ -8,14 +8,25 @@ import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 
 class ImageCapInset extends Component {
   render() {
-    const normalizedSource = resolveAssetSource(this.props.source);
+    const {
+      children,
+      source,
+      capInsets,
+      ...rest
+    } = this.props;
+
+    const normalizedSource = resolveAssetSource(source);
 
     return (
-      <RCTImageCapInset
-        {...this.props}
-        source={normalizedSource}
-        resizeMode={Image.resizeMode.stretch}
-      />
+      <View {...rest}>
+        <RCTImageCapInset
+          style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
+          capInsets={capInsets}
+          source={normalizedSource}
+          resizeMode={Image.resizeMode.stretch}
+        />
+        {children}
+      </View>
     );
   }
 }
