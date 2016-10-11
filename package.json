@@ -1,10 +1,10 @@
 {
   "name": "react-native-image-capinsets",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/madsleejensen/react-native-image-sequence.git"
+    "type": "git",
+    "url": "https://github.com/madsleejensen/react-native-image-sequence.git"
   },
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "android support for Image `capInsets`",
   "author": {
     "name": "Mads Lee Jensen",
