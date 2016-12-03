@@ -11,6 +11,7 @@ import dk.madslee.imageCapInsets.utils.RCTImageLoaderTask;
 
 public class RCTImageCapInsetView extends ImageView {
     private Rect mCapInsets;
+    private String mUri;
 
     public RCTImageCapInsetView(Context context) {
         super(context);
@@ -20,10 +21,16 @@ public class RCTImageCapInsetView extends ImageView {
 
     public void setCapInsets(Rect insets) {
         mCapInsets = insets;
+        reload();
     }
 
     public void setSource(String uri) {
-        final String key = uri + "-" + mCapInsets.toShortString();
+        mUri = uri;
+        reload();
+    }
+
+    public void reload() {
+        final String key = mUri + "-" + mCapInsets.toShortString();
         final RCTImageCache cache = RCTImageCache.getInstance();
 
         if (cache.has(key)) {
@@ -31,7 +38,7 @@ public class RCTImageCapInsetView extends ImageView {
             return;
         }
 
-        RCTImageLoaderTask task = new RCTImageLoaderTask(uri, getContext(), new RCTImageLoaderListener() {
+        RCTImageLoaderTask task = new RCTImageLoaderTask(mUri, getContext(), new RCTImageLoaderListener() {
             @Override
             public void onImageLoaded(Bitmap bitmap) {
                 int ratio = Math.round(bitmap.getDensity() / 160);
