@@ -1,5 +1,6 @@
 {
   "name": "react-native-image-capinsets",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/madsleejensen/react-native-image-capinsets.git"
