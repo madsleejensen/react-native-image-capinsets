@@ -56,35 +56,4 @@ public class RCTImageCapInsetView extends ImageView {
 
         task.execute();
     }
-
-	
-	/*
-	 * HACK: the following methods fix the wrong dimensions of the ninepatch when the activity is hidden and shown again,
-	 * and when the device is rotated. This hack is required because RN uses its own layout system that bypasses the android one.
-	 * In order to update the bounds of the background drawable, we pretend that the frame of the view has been changed.
-	 */
-		
-	@Override
-	protected void onWindowVisibilityChanged(int visibility) {
-		super.onWindowVisibilityChanged(visibility);       		
-		
-		if (visibility == android.view.View.VISIBLE) {			
-			fireFakeFrameChange();
-        }
-    }
-	
-	protected void onConfigurationChanged(android.content.res.Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		fireFakeFrameChange();
-    }
-	
-	private void fireFakeFrameChange() {		
-		final int left = getLeft();
-		final int top = getTop();
-		final int right = getRight();
-		final int bottom = getBottom();
-				
-		setFrame(left+1, top, right, bottom);
-		setFrame(left, top, right, bottom);		
-	}
 }
