@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/madsleejensen/react-native-image-capinsets.git"
   },
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "android support for Image `capInsets`",
   "author": {
     "name": "Mads Lee Jensen",
