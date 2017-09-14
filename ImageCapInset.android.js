@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Image,
@@ -34,11 +35,11 @@ class ImageCapInset extends Component {
 ImageCapInset.propTypes = {
   ...View.propTypes,
   source: Image.propTypes.source,
-  capInsets: React.PropTypes.shape({
-    top: React.PropTypes.number,
-    left: React.PropTypes.number,
-    right: React.PropTypes.number,
-    bottom: React.PropTypes.number,
+  capInsets: PropTypes.shape({
+    top: PropTypes.number,
+    left: PropTypes.number,
+    right: PropTypes.number,
+    bottom: PropTypes.number,
   }),
 };
 
