@@ -24,7 +24,7 @@ class ImageCapInset extends Component {
           style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
           capInsets={capInsets}
           source={normalizedSource}
-          resizeMode={Image.resizeMode.stretch}
+          resizeMode={'stretch'}
         />
         {children}
       </View>
