@@ -6,7 +6,8 @@ behind the scenes it will generate a `NinePatchDrawable` and set as background f
 
 1. `npm i --save react-native-image-capinsets`
 2. `react-native link react-native-image-capinsets`
-
+3. import dk.madslee.imageCapInsets.RCTImageCapInsetPackage in MainApplication;
+4. new RCTImageCapInsetPackage() in protected List<ReactPackage> getPackages()
 
 ## Examples
 
