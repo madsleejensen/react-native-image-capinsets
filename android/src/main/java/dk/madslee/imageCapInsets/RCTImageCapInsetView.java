@@ -21,6 +21,7 @@ public class RCTImageCapInsetView extends ImageView {
 
     public void setCapInsets(Rect insets) {
         mCapInsets = insets;
+
         reload();
     }
 
@@ -30,6 +31,11 @@ public class RCTImageCapInsetView extends ImageView {
     }
 
     public void reload() {
+        if (this.mUri == null)
+        {
+            return;
+        }
+
         final String key = mUri + "-" + mCapInsets.toShortString();
         final RCTImageCache cache = RCTImageCache.getInstance();
 
